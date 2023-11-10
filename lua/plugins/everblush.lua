@@ -1,4 +1,5 @@
-require('everblush').setup({
+return {
+    "Everblush/nvim",
 
     -- Default options
     override = {},
@@ -21,4 +22,4 @@ require('everblush').setup({
     nvim_tree = {
         contrast = true,
     },
-})
+}
