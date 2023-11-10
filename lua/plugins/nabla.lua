@@ -3,8 +3,6 @@ return {
     dependencies = {"nvim-treesitter/nvim-treesitter", "folke/tokyonight.nvim"},
 
     config = function()
-        vim.cmd("colorscheme tokyonight")
-
         -- Customize with popup({border = ...}) 
         --    * `single` (default)
         --    * `double`

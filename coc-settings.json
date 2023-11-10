@@ -5,7 +5,7 @@
       "rootPatterns": [ ".git/" ],
       "filetypes": ["c", "cc", "cpp", "c++", "h", "hpp", "objc", "objcpp"],
       "diagnostic.checkCurrentLine": true,
-      "clangd.compilationDatabaseCandidates": [ "${workspaceFolder}/build" ],
+      "clangd.compilationDatabaseCandidates": [ "${workspaceFolder}/build" ]
     }
   }
 }
