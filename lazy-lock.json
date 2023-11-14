@@ -1,7 +1,7 @@
 {
-  "blamer.nvim": { "branch": "master", "commit": "e0d43c11697300eb68f00d69df8b87deb0bf52dc" },
   "coc.nvim": { "branch": "master", "commit": "9c3723a011e68a4e4e7a37298bd0f6c64ab59dca" },
   "everblush": { "branch": "main", "commit": "9a0e695fdd57b340d3ba2b72406e3ca519029f25" },
+  "git-blame.nvim": { "branch": "master", "commit": "f07e913b7143f19edd6787229f2d51759b478600" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "leap.nvim": { "branch": "main", "commit": "b6ae80f8fc9993638608fc1a51c6ab0eeb12618c" },
   "nvim-lspconfig": { "branch": "master", "commit": "fa04d48113d7db6223c52b98c049995ecce3456e" },
