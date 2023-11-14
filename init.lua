@@ -9,6 +9,18 @@ vim.o.shiftwidth = 4
 
 vim.o.smartindent = true
 
+-- Highlight cursor line
+vim.o.cursorline = true
+-- Keep status line for all windows at bottom of screen
+-- https://github.com/neovim/neovim/pull/17266
+vim.o.laststatus = 3
+-- Hide commandline
+vim.o.cmdheight=0
+
+-- Start scrolling before cursor at edge of screen
+vim.o.scrolloff = 5
+
+
 -- lazy.nvim
 
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
