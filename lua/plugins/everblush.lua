@@ -16,6 +16,8 @@ return {
                 ["@comment"] = comment_color,
                 -- Custom line number color for better visibility
                 LineNr = { fg = "#C47220" },
+                -- Custom vertical buffer separator
+                WinSeparator = { fg = "#000000" },
             },
 
         })
