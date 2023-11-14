@@ -6,6 +6,7 @@ return {
             date_format = "%r",
             -- Make colors work with cursorline
             highlight_group = "CursorLine",
+            message_template = "   <summary>",
         }
     end
 }
