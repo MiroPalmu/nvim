@@ -1,7 +1,7 @@
 { 
   "languageserver": {
     "coc-clangd": {
-      "command": "clangd",
+      "command": "coc-clangd",
       "rootPatterns": [ ".git/" ],
       "filetypes": ["c", "cc", "cpp", "c++", "h", "hpp", "objc", "objcpp"],
       "diagnostic.checkCurrentLine": true,
