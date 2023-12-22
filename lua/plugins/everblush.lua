@@ -31,7 +31,8 @@ return {
                 ["@text.danger"] = { fg = custom_color8 },
                 ["@text.note"] = { fg = custom_color8 },
             },
-
+            -- Background comes from underlying terminal
+            transparent_background = true,
         })
 
         vim.cmd("colorscheme everblush")
