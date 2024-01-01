@@ -22,7 +22,7 @@ return {
                 -- Custom line number color for better visibility
                 LineNr = { fg = "#C47220" },
                 -- Custom vertical buffer separator
-                WinSeparator = { fg = "#000000" },
+                WinSeparator = { fg = "#FFFFFF" },
                 -- Cursor line line number
                 CursorLineNr = comment_color,
                 -- Set all which use color 8
