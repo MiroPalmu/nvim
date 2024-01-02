@@ -11,10 +11,28 @@ M.dependencies = {
 
 function M.config()
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-    vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-    vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+    -- Set label for "<leader>t" using which-key notation
+    require("which-key").register({ ["<leader>t"] = { name = "Telescope" } })
+
+    -- Set keymaps using native notation but set desc
+    -- which which-key can use.
+    vim.keymap.set('n', '<leader>tf', builtin.find_files, {
+        desc = "Find File",
+    })
+    vim.keymap.set('n', '<leader>tg', builtin.live_grep, {
+        desc = "Live Grep",
+    })
+    vim.keymap.set('n', '<leader>tb', builtin.buffers, {
+        desc = "List open Buffers",
+    })
+    vim.keymap.set('n', '<leader>th', builtin.help_tags, {
+        desc = "List available Help tags",
+    })
+    vim.keymap.set('n', '<leader>tk', builtin.keymaps, {
+        desc = "List normal mode Keymappings",
+    })
+
     require('telescope').setup{
         defaults = {
           -- Default configuration for telescope goes here:
