@@ -6,6 +6,8 @@
   "nvim-lspconfig": { "branch": "master", "commit": "6c797ff9324094e333e2ace9526ca4a62ad9d1ca" },
   "nvim-treesitter": { "branch": "master", "commit": "f861bc6148e7bc715f6a09bd34bb1f577b62a248" },
   "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
+  "ripgrep": { "branch": "master", "commit": "3f2fe0afee0d1a1eeb3235904cfef4f35c4644dc" },
+  "telescope-fzf-native.nvim": { "branch": "main", "commit": "6c921ca12321edaa773e324ef64ea301a1d0da62" },
   "telescope.nvim": { "branch": "master", "commit": "6213322ab56eb27356fdc09a5078e41e3ea7f3bc" },
   "vim-clang-format": { "branch": "master", "commit": "6b791825ff478061ad1c57b21bb1ed5a5fd0eb29" },
   "vimtex": { "branch": "master", "commit": "911987d8d65ade51311d512ac98cf39f89a309ea" },
