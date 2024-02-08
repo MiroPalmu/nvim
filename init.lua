@@ -20,6 +20,11 @@ vim.o.cmdheight=0
 -- Start scrolling before cursor at edge of screen
 vim.o.scrolloff = 5
 
+-- Use smartcase in seach, i.e. ignore case excpet when capitalized letters appear in seach.
+-- Note that \c and \C can be made to override this.
+
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 -- lazy.nvim
 
