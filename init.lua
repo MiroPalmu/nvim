@@ -26,6 +26,36 @@ vim.o.scrolloff = 5
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Keymaps:
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {
+    desc = "Exit terminal mode"
+})
+
+vim.keymap.set({'i', 't'}, '<A-h>', '<C-\\><C-N><C-w>h', {
+    desc = "Move to left [windows]",
+})
+vim.keymap.set({'i', 't'}, '<A-j>', '<C-\\><C-N><C-w>j', {
+    desc = "Move to down [windows]",
+})
+vim.keymap.set({'i', 't'}, '<A-k>', '<C-\\><C-N><C-w>k', {
+    desc = "Move to up [windows]",
+})
+vim.keymap.set({'i', 't'}, '<A-l>', '<C-\\><C-N><C-w>l', {
+    desc = "Move to right [windows]",
+})
+vim.keymap.set('n', '<A-h>', '<C-w>h', {
+    desc = "Move to left [windows]",
+})
+vim.keymap.set('n', '<A-j>', '<C-w>j', {
+    desc = "Move to down [windows]",
+})
+vim.keymap.set('n', '<A-k>', '<C-w>k', {
+    desc = "Move to up [windows]",
+})
+vim.keymap.set('n', '<A-l>', '<C-w>l', {
+    desc = "Move to right [windows]",
+})
+
 -- lazy.nvim
 
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
