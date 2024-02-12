@@ -1,6 +1,7 @@
 return {
     "stevearc/oil.nvim",
     -- Synoposis:
+    -- vim.keymap.set(...)
     -- config = function()
     --     settings = {
     --         ...
@@ -8,6 +9,11 @@ return {
     --     require('oil').setup(settings)
     -- end
     config = function ()
+
+        vim.keymap.set('n', '<leader><tab>', '<CMD>Oil<CR>', {
+            desc = "Open parent directory in Oil [file explorer]",
+        })
+
         -- These defaults are from Oil readme:
         -- https://github.com/stevearc/oil.nvim?tab=readme-ov-file#options
         settings = {
