@@ -27,6 +27,8 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keymaps:
+vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {
     desc = "Exit terminal mode"
 })
@@ -55,10 +57,11 @@ vim.keymap.set('n', '<A-k>', '<C-w>k', {
 vim.keymap.set('n', '<A-l>', '<C-w>l', {
     desc = "Move to right [windows]",
 })
+vim.keymap.set('n', '<leader>.', '<CMD>term<CR>', {
+    desc = "Open terminal",
+})
 
 -- lazy.nvim
-
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then vim.fn.system({
