@@ -82,7 +82,7 @@ function M.config()
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, vim.tbl_deep_extend("error", opts, {
             desc = "Goto references",
         }))
-        vim.keymap.set('n', '<space>f', function()
+        vim.keymap.set('n', '<space>v', function()
           vim.lsp.buf.format { async = true }
         end, vim.tbl_deep_extend("error", opts, {
                 desc = "Format file",
