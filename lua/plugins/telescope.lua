@@ -17,13 +17,13 @@ function M.config()
 
     -- Set keymaps using native notation but set desc
     -- which which-key can use.
-    vim.keymap.set('n', '<leader>tf', builtin.find_files, {
+    vim.keymap.set('n', '<leader>f', builtin.find_files, {
         desc = "Find File",
     })
-    vim.keymap.set('n', '<leader>tg', builtin.live_grep, {
+    vim.keymap.set('n', '<leader>g', builtin.live_grep, {
         desc = "Live Grep",
     })
-    vim.keymap.set('n', '<leader>tb', builtin.buffers, {
+    vim.keymap.set('n', '<leader>b', builtin.buffers, {
         desc = "List open Buffers",
     })
     vim.keymap.set('n', '<leader>th', builtin.help_tags, {
