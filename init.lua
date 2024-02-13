@@ -15,7 +15,7 @@ vim.o.cursorline = true
 -- https://github.com/neovim/neovim/pull/17266
 vim.o.laststatus = 3
 -- Hide commandline
-vim.o.cmdheight=0
+-- vim.o.cmdheight=0
 
 -- Start scrolling before cursor at edge of screen
 vim.o.scrolloff = 5
