@@ -26,6 +26,12 @@ vim.o.scrolloff = 5
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Disable noisy diagnostic messages. Use only underline.
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = false,
+})
+
 -- Keymaps:
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
