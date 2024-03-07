@@ -12,16 +12,29 @@ M.dependencies = {
 function M.config()
     local builtin = require('telescope.builtin')
 
-    -- Set label for "<leader>t" using which-key notation
+    -- Set label for "<leader>t", e.t.c. using which-key notation
     require("which-key").register({ ["<leader>t"] = { name = "Telescope" } })
+    require("which-key").register({ ["<leader>tg"] = { name = "Telescope git" } })
 
     -- Set keymaps using native notation but set desc
     -- which which-key can use.
     vim.keymap.set('n', '<leader>f', builtin.find_files, {
         desc = "Find File",
     })
-    vim.keymap.set('n', '<leader>g', builtin.live_grep, {
+    vim.keymap.set('n', '<leader>g', builtin.grep_string, {
+        desc = "Grep word under cursor",
+    })
+    vim.keymap.set('n', '<leader>l', builtin.live_grep, {
         desc = "Live Grep",
+    })
+    vim.keymap.set('n', '<leader>r', builtin.lsp_references, {
+        desc = "List LSP references for word under cursor",
+    })
+    vim.keymap.set('n', '<leader>s', builtin.lsp_document_symbols, {
+        desc = "List LSP document symbols in current buffer",
+    })
+    vim.keymap.set('n', '<leader>S', builtin.lsp_workspace_symbols, {
+        desc = "List LSP document symbols in current workspace",
     })
     vim.keymap.set('n', '<leader>b', builtin.buffers, {
         desc = "List open Buffers",
@@ -29,8 +42,17 @@ function M.config()
     vim.keymap.set('n', '<leader>th', builtin.help_tags, {
         desc = "List available Help tags",
     })
+    vim.keymap.set('n', '<leader>tm', builtin.man_pages, {
+        desc = "List manpage entries",
+    })
     vim.keymap.set('n', '<leader>tk', builtin.keymaps, {
         desc = "List normal mode Keymappings",
+    })
+    vim.keymap.set('n', '<leader>tgs', builtin.git_status, {
+        desc = "Status",
+    })
+    vim.keymap.set('n', '<leader>tgh', builtin.git_stash, {
+        desc = "Stash",
     })
 
     require('telescope').setup{
