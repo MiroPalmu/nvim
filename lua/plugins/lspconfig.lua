@@ -17,7 +17,7 @@ function M.config()
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-    vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, {
+    vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {
         desc = "Open diagnostics (external tools)",
     })
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {
@@ -26,7 +26,7 @@ function M.config()
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {
         desc = "Goto Next diagnostic",
     })
-    vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, {
+    vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {
         desc = "Add buffer diagnostics to the location list",
     })
 
@@ -82,7 +82,7 @@ function M.config()
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, vim.tbl_deep_extend("error", opts, {
             desc = "Goto references",
         }))
-        vim.keymap.set({ 'n', 'v'}, '<space>v', function() vim.lsp.buf.format { async = true } end,
+        vim.keymap.set({ 'n', 'v'}, '<leader>v', function() vim.lsp.buf.format { async = true } end,
                 vim.tbl_deep_extend("error", opts, {
                 desc = "Format file",
         }))
