@@ -34,6 +34,12 @@ vim.diagnostic.config({
 
 -- Keymaps:
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.keymap.set({ 'n', 'v'} , '<Space>', '<Nop>') -- Maps keymaps colliding with leader to noop.
+    -- Note about aboe:
+    --
+    -- For some reason vim.keymap.del({mode}, {lsh}) can not be used to delete
+    -- the default keymaps in nvim. It can only be used to delete user-defined maps.
+    -- The solution is to map the unwanted key to noop.
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {
     desc = "Exit terminal mode"
