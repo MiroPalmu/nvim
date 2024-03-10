@@ -59,34 +59,33 @@ function M.config()
 
         -- Set label for "<leader>w" using which-key notation
         require("which-key").register({ ["<leader>w"] = { name = "Lsp Workspaces" } })
-        vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, vim.tbl_deep_extend("error", opts, {
+        vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, vim.tbl_deep_extend("error", opts, {
             desc = "Add Workspace folder",
         }))
-        vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, vim.tbl_deep_extend("error", opts, {
+        vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, vim.tbl_deep_extend("error", opts, {
             desc = "Remove Workspace folder",
         }))
-        vim.keymap.set('n', '<space>wl', function()
+        vim.keymap.set('n', '<leader>wl', function()
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, vim.tbl_deep_extend("error", opts, {
                 desc = "List Workspace forlder",
             }))
-        vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, vim.tbl_deep_extend("error", opts, {
+        vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, vim.tbl_deep_extend("error", opts, {
             desc = "Type definition",
         }))
-        vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, vim.tbl_deep_extend("error", opts, {
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, vim.tbl_deep_extend("error", opts, {
             desc = "Rename",
         }))
-        vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, vim.tbl_deep_extend("error", opts, {
+        vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, vim.tbl_deep_extend("error", opts, {
             desc = "Code Action",
         }))
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, vim.tbl_deep_extend("error", opts, {
             desc = "Goto references",
         }))
-        vim.keymap.set('n', '<space>v', function()
-          vim.lsp.buf.format { async = true }
-        end, vim.tbl_deep_extend("error", opts, {
+        vim.keymap.set({ 'n', 'v'}, '<space>v', function() vim.lsp.buf.format { async = true } end,
+                vim.tbl_deep_extend("error", opts, {
                 desc = "Format file",
-            }))
+        }))
       end,
     })
 
