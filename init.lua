@@ -73,6 +73,14 @@ vim.keymap.set('n', '<leader>.', '<CMD>term<CR>', {
     desc = "Open terminal",
 })
 
+-- Option keymaps:
+vim.keymap.set({ 'n', 'v' }, '<leader>ol', '<CMD>set nu!<CR>', {
+    desc = "Line numbers",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>or', '<CMD>set rnu!<CR>', {
+    desc = "Relative line numbers",k
+})
+
 -- lazy.nvim
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
