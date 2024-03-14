@@ -13,6 +13,7 @@ return {
     config = function()
         require("which-key").register({
             ["<leader>o"] = { name = "Toggle options" },
+            ["<leader>c"] = { name = "Set colorscheme" },
         })
     end,
 }

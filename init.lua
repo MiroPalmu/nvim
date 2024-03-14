@@ -81,6 +81,24 @@ vim.keymap.set({ 'n', 'v' }, '<leader>or', '<CMD>set rnu!<CR>', {
     desc = "Relative line numbers",k
 })
 
+-- Coloscheme keymaps:
+
+vim.keymap.set({ 'n', 'v' }, '<leader>cp', '<CMD>colorscheme peachpuff<CR>', {
+    desc = "Peachpuff",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>ci', '<CMD>colorscheme industry<CR>', {
+    desc = "Industry [black]",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>cd', '<CMD>colorscheme default<CR>', {
+    desc = "Default",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>cb', '<CMD>colorscheme blue<CR>', {
+    desc = "Blue",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>cz', '<CMD>colorscheme zellner<CR>', {
+    desc = "Zellner [white]",
+})
+
 -- lazy.nvim
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
