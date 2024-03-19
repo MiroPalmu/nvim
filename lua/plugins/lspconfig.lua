@@ -6,6 +6,10 @@ M.dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     "saadparwaiz1/cmp_luasnip",
     "L3MON4D3/LuaSnip",
+    {
+        "j-hui/fidget.nvim",
+        opts = {},
+    },
 }
 
 -- cmp setup at bottom of this function
