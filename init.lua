@@ -61,7 +61,7 @@ vim.keymap.set({ 'n', 'v'} , '<Space>', '<Nop>') -- Maps keymaps colliding with 
     -- the default keymaps in nvim. It can only be used to delete user-defined maps.
     -- The solution is to map the unwanted key to noop.
 
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', {
     desc = "Exit terminal mode"
 })
 
