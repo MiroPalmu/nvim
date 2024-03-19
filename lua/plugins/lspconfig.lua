@@ -3,8 +3,6 @@ local M = { "neovim/nvim-lspconfig" }
 M.dependencies = {
     "neovim/nvim-lspconfig",
     "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-nvim-lsp",
-    "saadparwaiz1/cmp_luasnip",
     "L3MON4D3/LuaSnip",
     {
         "j-hui/fidget.nvim",
@@ -146,6 +144,7 @@ function M.config()
         sources = {
             { name = 'nvim_lsp' },
             { name = 'luasnip' },
+            { name = 'path' },
         },
     }
 end
