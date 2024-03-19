@@ -22,7 +22,6 @@ vim.o.scrolloff = 5
 
 -- Use smartcase in seach, i.e. ignore case excpet when capitalized letters appear in seach.
 -- Note that \c and \C can be made to override this.
-
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
@@ -30,6 +29,27 @@ vim.o.smartcase = true
 vim.diagnostic.config({
     virtual_text = false,
     signs = false,
+})
+
+vim.o.breakindent = true
+
+--  How quickly swap file will be written to disk.
+vim.o.updatetime = 250 -- ms, default: 4000
+
+-- How whitespaces are drawn:
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- Show preview when subtituing:
+vim.opt.inccommand = 'split'
+
+-- Highlight yanked text
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 
 -- Keymaps:
