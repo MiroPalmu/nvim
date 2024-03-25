@@ -21,7 +21,10 @@ function M.config()
     vim.keymap.set('n', '<leader>f', builtin.find_files, {
         desc = "Find File",
     })
-    vim.keymap.set('n', '<leader>g', builtin.grep_string, {
+    vim.keymap.set('n', '<leader>g', builtin.current_buffer_fuzzy_find, {
+        desc = "Find in current buffer",
+    })
+    vim.keymap.set('n', '<leader>tw', builtin.grep_string, {
         desc = "Grep word under cursor",
     })
     vim.keymap.set('n', '<leader>l', builtin.live_grep, {
@@ -53,6 +56,9 @@ function M.config()
     })
     vim.keymap.set('n', '<leader>tgh', builtin.git_stash, {
         desc = "Stash",
+    })
+    vim.keymap.set('n', '<leader>to', builtin.vim_options, {
+        desc = "Nvim options",
     })
 
     require('telescope').setup{
