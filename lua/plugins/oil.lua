@@ -23,10 +23,10 @@ return {
             -- Id is automatically added at the beginning, and name at the end
             -- See :help oil-columns
             columns = {
-                "icon",
-                -- "permissions",
-                -- "size",
-                -- "mtime",
+                -- "icon", -- requires nvim-web-devicons which requires nerd-font
+                "permissions",
+                "size",
+                "mtime",
             },
             -- Buffer-local options to use for oil buffers
             buf_options = {
