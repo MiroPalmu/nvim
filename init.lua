@@ -46,6 +46,18 @@ vim.opt.inccommand = 'split'
 -- Fold options:
 vim.opt.foldcolumn = 'auto'
 
+-- Line numbers:
+vim.opt.number = false
+vim.opt.relativenumber = true
+vim.opt.numberwidth = 3
+-- Note about above:
+--
+--     Relative line numbers are useful, absolute line numbers less so.
+--
+--     Option numberwidth controls the minimun number of columns to use for the line number.
+--     By default it is 4 which is enough for 3 digit numbers. As we want only the relative numbers
+--     and it is assumed that they are always 1 or 2 digits long, we can set numberwidth to 3.
+
 -- Highlight yanked text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
