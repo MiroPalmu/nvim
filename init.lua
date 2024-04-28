@@ -110,10 +110,20 @@ vim.keymap.set('n', '<leader>.', '<CMD>term<CR>', {
 
 -- Option keymaps:
 vim.keymap.set({ 'n', 'v' }, '<leader>ol', '<CMD>set nu!<CR>', {
-    desc = "Line numbers",
+    desc = "Line numbers [toggle]",
 })
 vim.keymap.set({ 'n', 'v' }, '<leader>or', '<CMD>set rnu!<CR>', {
-    desc = "Relative line numbers",
+    desc = "Relative line numbers [toggle]",
+})
+
+vim.keymap.set({ 'n', 'v' }, '<leader>ofm', '<CMD>set fdm=manual<CR>', {
+    desc = "Manual",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>ofi', '<CMD>set fdm=indent<CR>', {
+    desc = "Indent",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>ofd', '<CMD>set fdm=dff<CR>', {
+    desc = "Diff",
 })
 
 -- Coloscheme keymaps:

@@ -12,7 +12,8 @@ return {
     },
     config = function()
         require("which-key").register({
-            ["<leader>o"] = { name = "Toggle options" },
+            ["<leader>o"] = { name = "Options" },
+            ["<leader>of"] = { name = "Set fold method" },
             ["<leader>c"] = { name = "Set colorscheme" },
         })
     end,
