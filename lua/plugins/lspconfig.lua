@@ -16,6 +16,9 @@ function M.config()
     local lspconfig = require('lspconfig')
     lspconfig.pyright.setup {}
     lspconfig.clangd.setup{}
+    lspconfig.gdscript.setup{}
+    lspconfig.gdshader_lsp.setup{}
+    lspconfig.bashls.setup{}
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
