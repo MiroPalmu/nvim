@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Keymaps:
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.keymap.set({ 'n', 'v'} , '<Space>', '<Nop>') -- Maps keymaps colliding with leader to noop.
-    -- Note about aboe:
+    -- Note about above:
     --
     -- For some reason vim.keymap.del({mode}, {lsh}) can not be used to delete
     -- the default keymaps in nvim. It can only be used to delete user-defined maps.
@@ -101,7 +101,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ol', '<CMD>set nu!<CR>', {
     desc = "Line numbers",
 })
 vim.keymap.set({ 'n', 'v' }, '<leader>or', '<CMD>set rnu!<CR>', {
-    desc = "Relative line numbers",k
+    desc = "Relative line numbers",
 })
 
 -- Coloscheme keymaps:
