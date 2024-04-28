@@ -43,6 +43,9 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Show preview when subtituing:
 vim.opt.inccommand = 'split'
 
+-- Fold options:
+vim.opt.foldcolumn = 'auto'
+
 -- Highlight yanked text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
