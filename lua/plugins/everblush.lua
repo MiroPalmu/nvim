@@ -1,6 +1,7 @@
 return {
     "Everblush/nvim",
     name = "everblush",
+    priority = 1000, -- Recommended to be high for colorschemes by Lazy.
     config = function()
         -- Custom comment color for better visibility
         local comment_color = {
