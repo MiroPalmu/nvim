@@ -115,6 +115,10 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ol', '<CMD>set nu!<CR>', {
 vim.keymap.set({ 'n', 'v' }, '<leader>or', '<CMD>set rnu!<CR>', {
     desc = "Relative line numbers [toggle]",
 })
+vim.keymap.set({ 'n', 'v' }, '<leader>ob',
+    '<CMD>exec &bg=="light"? "set bg=dark" : "set bg=light"<CR>',
+    { desc = "Background light/dark [toggle]", }
+)
 
 vim.keymap.set({ 'n', 'v' }, '<leader>ofm', '<CMD>set fdm=manual<CR>', {
     desc = "Manual",
