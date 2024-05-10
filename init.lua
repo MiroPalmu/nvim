@@ -143,6 +143,17 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cb', '<CMD>colorscheme blue<CR>', {
 vim.keymap.set({ 'n', 'v' }, '<leader>cz', '<CMD>colorscheme zellner<CR>', {
     desc = "Zellner [white]",
 })
+vim.keymap.set({ 'n', 'v' }, '<leader>ce', '<CMD>colorscheme everblush<CR>', {
+    desc = "Everblush [plugin]",
+})
+vim.keymap.set({ 'n', 'v' }, '<leader>cg',
+    '<CMD>colorscheme gruvbox<CR><CMD>set background=dark<CR>',
+    { desc = "Gruvbox dark [plugin]", }
+)
+vim.keymap.set({ 'n', 'v' }, '<leader>cG',
+    '<CMD>colorscheme gruvbox<CR><CMD>set background=light<CR>',
+    { desc = "Gruvbox light [plugin]", }
+)
 
 -- lazy.nvim
 
