@@ -24,6 +24,7 @@ return {
                "c",
                "cpp",
                "python",
+               "markdown",
             },
            sync_install = false,
            highlight = { enable = true },
