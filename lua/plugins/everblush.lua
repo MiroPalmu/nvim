@@ -35,7 +35,5 @@ return {
             -- Background comes from underlying terminal
             transparent_background = true,
         })
-
-        vim.cmd("colorscheme everblush")
     end,
 }
