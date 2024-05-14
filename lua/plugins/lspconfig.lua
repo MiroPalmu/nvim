@@ -19,6 +19,7 @@ function M.config()
     lspconfig.gdscript.setup{}
     lspconfig.gdshader_lsp.setup{}
     lspconfig.bashls.setup{}
+    lspconfig.ltex.setup{}
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
