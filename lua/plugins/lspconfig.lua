@@ -19,7 +19,21 @@ function M.config()
     lspconfig.gdscript.setup{}
     lspconfig.gdshader_lsp.setup{}
     lspconfig.bashls.setup{}
-    lspconfig.ltex.setup{}
+    lspconfig.ltex.setup{
+        autostart = false, -- Only enable this explicitly.
+    }
+
+    vim.keymap.set('n', '<leader>og',
+        function()
+            local clients = vim.lsp.get_active_clients({ name = "ltex" })
+            if #clients == 0 then
+                vim.cmd.LspStart("ltex")
+            else
+                vim.cmd.LspStop("ltex")
+            end
+        end,
+        { desc = "Grammar LSP (ltex) [toggle]", }
+    )
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
