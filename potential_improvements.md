@@ -7,6 +7,7 @@
 
 # Plugins to investigate
 
+- https://github.com/p00f/clangd_extensions.nvim
 - Comment.nvim 
     - create comments with keybind
     - apparently in ~early 2024 implemented native feature to neovim
