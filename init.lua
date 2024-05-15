@@ -120,6 +120,8 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ob',
     { desc = "Background light/dark [toggle]", }
 )
 
+-- Fold method keymaps:
+
 vim.keymap.set({ 'n', 'v' }, '<leader>ofm', '<CMD>set fdm=manual<CR>', {
     desc = "Manual",
 })
@@ -129,6 +131,13 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ofi', '<CMD>set fdm=indent<CR>', {
 vim.keymap.set({ 'n', 'v' }, '<leader>ofd', '<CMD>set fdm=dff<CR>', {
     desc = "Diff",
 })
+vim.keymap.set({ 'n', 'v' }, '<leader>oft',
+    function()
+        vim.opt.foldmethod = "expr"
+        vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    end,
+    { desc = "treesitter.foldexpr" }
+)
 
 -- Coloscheme keymaps:
 
