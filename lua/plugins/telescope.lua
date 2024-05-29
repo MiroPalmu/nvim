@@ -49,7 +49,7 @@ function M.config()
         desc = "List manpage entries",
     })
     vim.keymap.set('n', '<leader>tk', builtin.keymaps, {
-        desc = "List normal mode Keymappings",
+        desc = "List keymaps",
     })
     vim.keymap.set('n', '<leader>tgs', builtin.git_status, {
         desc = "Status",
