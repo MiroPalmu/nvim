@@ -168,6 +168,54 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cG',
     { desc = "Gruvbox light [plugin]", }
 )
 
+-- Github Dark themes:
+vim.keymap.set({'n', 'v'}, '<leader>chd<leader>',
+    '<CMD>colorscheme github_dark<CR>',
+    { desc = "Github Dark [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chdD',
+    '<CMD>colorscheme github_dark_dimmed<CR>',
+    { desc = "Github Dark Dimmed [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chdd',
+    '<CMD>colorscheme github_dark_default<CR>',
+    { desc = "Github Dark Default [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chdh',
+    '<CMD>colorscheme github_dark_high_contrast<CR>',
+    { desc = "Github Dark Hight Contrast [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chdc',
+    '<CMD>colorscheme github_dark_colorblind<CR>',
+    { desc = "Github Dark Colorblind [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chdt',
+    '<CMD>colorscheme github_dark_tritanopia<CR>',
+    { desc = "Github Dark Tritanopia [plugin]", }
+)
+
+-- Github Light themes:
+vim.keymap.set({'n', 'v'}, '<leader>chl<leader>',
+    '<CMD>colorscheme github_light<CR>',
+    { desc = "Github Light [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chld',
+    '<CMD>colorscheme github_light_default<CR>',
+    { desc = "Github Light Default [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chlh',
+    '<CMD>colorscheme github_light_high_contrast<CR>',
+    { desc = "Github Light High Contrast [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chlc',
+    '<CMD>colorscheme github_light_colorblind<CR>',
+    { desc = "Github Light Light Colorblind [plugin]", }
+)
+vim.keymap.set({'n', 'v'}, '<leader>chlt',
+    '<CMD>colorscheme github_light_tritanopia<CR>',
+    { desc = "Github Light Tritanopia [plugin]", }
+)
+
 -- lazy.nvim
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
