@@ -1,10 +1,25 @@
+matchup_plugin_spec = {
+    "andymass/vim-matchup",
+    setup = function()
+        vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+}
+
 return {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+        matchup_plugin_spec,
+    },
     build = ":TSUpdate",
     config = function () 
        local configs = require("nvim-treesitter.configs")
 
        configs.setup({
+           -- Enables interoperation with matchup plugin.
+           -- From: https://github.com/andymass/vim-matchup#tree-sitter-integration
+           matchup = {
+               enable = true,
+           },
            ensure_installed = {
                "bash",
                "git_config",
@@ -39,7 +54,7 @@ return {
                    scope_incremental = "grc",
                    node_decremental = "grm",
                }
-           }
+           },
        })
     end
 }
