@@ -25,8 +25,8 @@ return {
         require('trouble').setup(opts)
 
         -- Set label for "<leader>x" using which-key notation
-        require("which-key").register({
-            ["<leader>x"] = { name = "Trouble" },
+        require("which-key").add({
+            { "<leader>x", group = "Trouble" },
         })
 
         -- Lua

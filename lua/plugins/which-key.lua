@@ -11,10 +11,10 @@ return {
       -- refer to the configuration section below
     },
     config = function()
-        require("which-key").register({
-            ["<leader>o"] = { name = "Options" },
-            ["<leader>of"] = { name = "Set fold method" },
-            ["<leader>c"] = { name = "Set colorscheme" },
+        require("which-key").add({
+            { "<leader>o", group = "Options" },
+            { "<leader>of", group = "Set fold method" },
+            { "<leader>c", group = "Set colorscheme" },
         })
     end,
 }

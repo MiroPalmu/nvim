@@ -78,7 +78,7 @@ function M.config()
         }))
 
         -- Set label for "<leader>w" using which-key notation
-        require("which-key").register({ ["<leader>w"] = { name = "Lsp Workspaces" } })
+        require("which-key").add({{ "<leader>w", group = "Lsp Workspaces" }})
         vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, vim.tbl_deep_extend("error", opts, {
             desc = "Add Workspace folder",
         }))

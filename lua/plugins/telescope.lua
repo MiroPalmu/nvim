@@ -13,8 +13,10 @@ function M.config()
     local builtin = require('telescope.builtin')
 
     -- Set label for "<leader>t", e.t.c. using which-key notation
-    require("which-key").register({ ["<leader>t"] = { name = "Telescope" } })
-    require("which-key").register({ ["<leader>tg"] = { name = "Telescope git" } })
+    require("which-key").add({
+        { "<leader>t", group = "Telescope" },
+        { "<leader>tg", group = "Telescope git" },
+    })
 
     -- Set keymaps using native notation but set desc
     -- which which-key can use.
