@@ -126,4 +126,46 @@ return {
             }
         )
     end,
+    config = function()
+        vim.keymap.set("n", "<leader>mi", ":MoltenInit<CR>", {
+            silent = true,
+            desc = "Initialize Molten"
+        })
+        vim.keymap.set("n", "<leader>mo", ":MoltenEvaluateOperator<CR>", {
+            silent = true,
+            desc = "Evaluate operator"
+        })
+        vim.keymap.set("n", "<leader>ml", ":MoltenEvaluateLine<CR>", {
+            silent = true,
+            desc = "Evaluate line"
+        })
+        vim.keymap.set("n", "<leader>mr", ":MoltenReevaluateCell<CR>", {
+            silent = true,
+            desc = "Re-evaluate cell"
+        })
+        vim.keymap.set("v", "<leader>mv", ":<C-u>MoltenEvaluateVisual<CR>gv", {
+            silent = true,
+            desc = "Evaluate visual selection"
+        })
+        vim.keymap.set("n", "<leader>md", ":MoltenDelete<CR>", {
+            silent = true,
+            desc = "Molten delete cell"
+        })
+        vim.keymap.set("n", "<leader>mh", ":MoltenHideOutput<CR>", {
+            silent = true,
+            desc = "Hide output"
+        })
+        vim.keymap.set("n", "<leader>ms", ":noautocmd MoltenEnterOutput<CR>", {
+            silent = true,
+            desc = "Show/enter output"
+        })
+        vim.keymap.set("n", "<leader>mn", ":noautocmd MoltenNext<CR>", {
+            silent = true,
+            desc = "Goto next cell"
+        })
+        vim.keymap.set("n", "<leader>mp", ":noautocmd MoltenPrev<CR>", {
+            silent = true,
+            desc = "Goto previous cell"
+        })
+    end,
 }
