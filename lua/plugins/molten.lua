@@ -33,7 +33,7 @@ image_plugin_spec = {
             },
         },
         max_width = 100,
-        max_height = 12,
+        max_height = 100,
         max_width_window_percentage = math.huge,
         max_height_window_percentage = math.huge,
         window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
@@ -112,7 +112,8 @@ return {
         vim.g.python3_host_prog = vim.fn.expand("~/data/scratch/molten-nvim-venv/bin/python3")
         -- these are examples, not defaults. Please see the readme
         vim.g.molten_image_provider = "image.nvim"
-        vim.g.molten_output_win_max_height = 20
+        vim.g.molten_output_win_max_height = 100
+        vim.g.molten_output_virt_lines = true
 
         vim.api.nvim_create_user_command(
             'NewNotebook',
