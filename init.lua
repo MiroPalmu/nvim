@@ -68,7 +68,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Keymaps:
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+-- Make sure to set `map[localleader` before lazy so your mappings are correct-
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+    -- Note about above:
+    --
+    -- In a global plugin <Leader> should be used and in a filetype plugin
+    -- <LocalLeader>.  "mapleader" and "maplocalleader" can be equal.  Although, if
+    -- you make them different, there is a smaller chance of mappings from global
+    -- plugins to clash with mappings for filetype plugins.  For example, you could
+    -- keep "mapleader" at the default backslash, and set "maplocalleader" to an
+    -- underscore.
+
 vim.keymap.set({ 'n', 'v'} , '<Space>', '<Nop>') -- Maps keymaps colliding with leader to noop.
     -- Note about above:
     --
