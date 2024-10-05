@@ -229,16 +229,46 @@ vim.keymap.set({'n', 'v'}, '<leader>chlt',
 
 -- lazy.nvim
 
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+require("lazy").setup({
+    spec = {
+        -- Use plugin files from lua/plugins
+        { import = "plugins" },
+    },
+    -- automatically check for plugin updates
+    checker = { enabled = true },
+
+    -- lazy can generate helptags from the headings in markdown readme files,
+    -- so :help works even for plugins that don't have vim docs.
+    -- when the readme opens with :help it will be correctly displayed as markdown
+    readme = {
+        enabled = true,
+        root = vim.fn.stdpath("state") .. "/lazy/readme",
+        files = { "README.md", "lua/**/README.md" },
+        -- only generate markdown helptags for plugins that dont have docs
+        skip_if_doc_exists = true,
+    },
+    dev = {
+        ---@type string | fun(plugin: LazyPlugin): string directory where you store your local plugin projects
+        path = "~/data/scratch/nvim-plugins",
+        ---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
+        patterns = {}, -- For example {"folke"}
+        fallback = false, -- Fallback to git when local plugin doesn't exist
+    },
+})
