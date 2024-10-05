@@ -94,6 +94,7 @@ end
 
 return {
     "benlubas/molten-nvim",
+    lazy = true,
     dependencies = {
         image_plugin_spec,
         {
