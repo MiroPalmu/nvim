@@ -252,7 +252,7 @@ require("lazy").setup({
         { import = "plugins" },
     },
     -- automatically check for plugin updates
-    checker = { enabled = true },
+    checker = { enabled = false },
 
     -- lazy can generate helptags from the headings in markdown readme files,
     -- so :help works even for plugins that don't have vim docs.
