@@ -227,6 +227,12 @@ vim.keymap.set({'n', 'v'}, '<leader>chlt',
     { desc = "Github Light Tritanopia [plugin]", }
 )
 
+-- Shortcut for colorscheme that is used a lot atm.
+vim.keymap.set({'n', 'v'}, '<leader>cc',
+    '<CMD>colorscheme github_dark_dimmed<CR>',
+    { desc = "Github Dark Dimmed [plugin]", }
+)
+
 -- lazy.nvim
 
 -- Bootstrap lazy.nvim
